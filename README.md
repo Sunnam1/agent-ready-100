@@ -10,6 +10,7 @@ A static HTML case study for Composio’s AI Product Ops take-home assignment. T
 - `index.html` — the complete one-page case study structure.
 - `styles.css` — responsive visual design.
 - `app.js` — dataset loading, metrics, filters, and audit replay.
+- `build-static.mjs` — packages the same static files for the secondary Sites deployment.
 - `data/apps.json` — normalized 100-app research dataset.
 - `data/verification.json` — deterministic 20-app manual verification sample.
 - `agent/research.mjs` — repeatable research QA agent.
@@ -43,7 +44,9 @@ Then open `http://localhost:8000`. Opening `index.html` directly is not supporte
 ## Validation
 
 ```bash
-node --test tests/static-site.test.mjs
+npm test
 ```
+
+There are no packages to install; the `package.json` only provides build and test shortcuts.
 
 Research date: 17 August 2026. Developer programs and access rules change; rerun the agent and re-check low-confidence rows before making outreach decisions.

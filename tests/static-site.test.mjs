@@ -22,6 +22,7 @@ test("the frontend is static HTML, CSS, and JavaScript", async () => {
   assert.ok(files.includes("index.html"));
   assert.ok(files.includes("styles.css"));
   assert.ok(files.includes("app.js"));
+  assert.ok(files.includes("build-static.mjs"));
   assert.deepEqual(files.filter((file) => /\.tsx?$/.test(file)), []);
 
   const [html, script] = await Promise.all([read("index.html"), read("app.js")]);
