@@ -199,7 +199,7 @@ export default function Home() {
             <div className="artifact-links">
               <a href="/apps.json" download>Download dataset <b>↓</b></a>
               <a href="/research-report.json" download>Download agent audit <b>↓</b></a>
-              <a href="https://git.chatgpt-team.site/c0d3ff54-9ac3-4719-912a-463eb37f7a43/appgprj_6a82f2eca5c0819192b64ffd9d563d54.git" target="_blank" rel="noreferrer">Source repository <b>↗</b></a>
+              <a href="https://github.com/Sunnam1/agent-ready-100" target="_blank" rel="noreferrer">Source repository <b>↗</b></a>
             </div>
           </article>
         </div>

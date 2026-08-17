@@ -2,7 +2,9 @@
 
 An evidence-backed research system and one-page case study for Composio’s AI Product Ops take-home assignment.
 
-Source mirror: https://git.chatgpt-team.site/c0d3ff54-9ac3-4719-912a-463eb37f7a43/appgprj_6a82f2eca5c0819192b64ffd9d563d54.git
+Live case study: https://agent-ready-100.ilovetheguitarihave.chatgpt.site
+
+Source repository: https://github.com/Sunnam1/agent-ready-100
 
 ## What is here
 
