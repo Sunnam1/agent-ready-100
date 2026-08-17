@@ -1,0 +1,30 @@
+{
+  "sampleSize": 20,
+  "fieldsPerApp": 5,
+  "firstPassAccuracy": 83,
+  "finalAccuracy": 96,
+  "method": "Deterministic stratified sample: two apps from each of the ten categories. Five claims per app were checked against first-party documentation: auth, credential access, API surface, MCP status, and verdict.",
+  "residualUncertainty": "Four of 100 sampled field judgments remain directional because the vendor exposes no public developer material or requires an account to inspect it.",
+  "checks": [
+    {"app":"Salesforce","category":"CRM & Sales","result":"Hit","finding":"OAuth and broad API confirmed; edition/admin caveat retained.","source":"https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html"},
+    {"app":"HubSpot","category":"CRM & Sales","result":"Corrected","finding":"Added static-token path and super-admin requirement; OAuth is required for multi-account apps.","source":"https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview"},
+    {"app":"Zendesk","category":"Support","result":"Corrected","finding":"First pass treated API tokens as durable; docs show staged retirement through April 2027.","source":"https://developer.zendesk.com/documentation/api-basics/authentication/oauth-migration/"},
+    {"app":"Plain","category":"Support","result":"Corrected","finding":"The GraphQL claim was right, but the first pass missed Plain’s official 30-tool OAuth MCP server.","source":"https://help.plain.com/article/mcp-server"},
+    {"app":"Slack","category":"Messaging","result":"Corrected","finding":"Added Slack’s official remote MCP surface, which the initial API-only pass missed.","source":"https://docs.slack.dev/ai/mcp-server/"},
+    {"app":"WhatsApp Business","category":"Messaging","result":"Hit","finding":"Cloud API is documented, but production remains business/policy gated.","source":"https://developers.facebook.com/docs/whatsapp/cloud-api/get-started"},
+    {"app":"Google Ads","category":"Marketing","result":"Corrected","finding":"OAuth alone is insufficient; production calls also need an approved developer token.","source":"https://developers.google.com/google-ads/api/docs/access-levels"},
+    {"app":"Mailchimp","category":"Marketing","result":"Hit","finding":"OAuth distribution path and broad Marketing API confirmed.","source":"https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/"},
+    {"app":"Shopify","category":"Ecommerce","result":"Corrected","finding":"Updated the default surface to GraphQL, marked REST Admin legacy, and added official Dev MCP.","source":"https://shopify.dev/docs/apps/build/devmcp"},
+    {"app":"Amazon Selling Partner","category":"Ecommerce","result":"Hit","finding":"LWA plus AWS signing and multi-stage production approval confirmed.","source":"https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications"},
+    {"app":"Apify","category":"Data & SEO","result":"Hit","finding":"Self-serve token, broad REST API, and official MCP confirmed.","source":"https://docs.apify.com/platform/integrations/mcp"},
+    {"app":"Sherlock","category":"Data & SEO","result":"Hit","finding":"No auth and CLI-only surface confirmed; wrapping is required.","source":"https://github.com/sherlock-project/sherlock"},
+    {"app":"GitHub","category":"Developer","result":"Hit","finding":"Multi-mode auth, broad REST/GraphQL, and official MCP confirmed.","source":"https://github.com/github/github-mcp-server"},
+    {"app":"Snowflake","category":"Developer","result":"Corrected","finding":"Added PAT to the auth set and Snowflake Labs MCP evidence.","source":"https://docs.snowflake.com/en/developer-guide/sql-api/authenticating"},
+    {"app":"Notion","category":"Productivity","result":"Hit","finding":"OAuth/internal token, page-sharing boundary, and official MCP confirmed.","source":"https://developers.notion.com/docs/mcp"},
+    {"app":"Jira","category":"Productivity","result":"Hit","finding":"OAuth/API-token paths, broad REST, and Atlassian remote MCP confirmed.","source":"https://www.atlassian.com/platform/remote-mcp-server"},
+    {"app":"Stripe","category":"Finance","result":"Hit","finding":"Self-serve test credentials, broad API, and official MCP confirmed.","source":"https://docs.stripe.com/mcp"},
+    {"app":"Plaid","category":"Finance","result":"Corrected","finding":"Split self-serve sandbox from reviewed production access.","source":"https://plaid.com/docs/api/"},
+    {"app":"Gemini Notebook Enterprise","category":"AI & Media","result":"Corrected","finding":"Consumer NotebookLM was conflated with the renamed enterprise product; the row now records its Pre-GA API, billing, IAM, and licensing gate.","source":"https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks"},
+    {"app":"Consensus","category":"AI & Media","result":"Unresolved","finding":"No first-party public API/auth documentation found; verdict remains outreach with low confidence.","source":"https://consensus.app/"}
+  ]
+}

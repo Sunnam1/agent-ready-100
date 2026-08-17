@@ -1,0 +1,1831 @@
+{
+  "generatedAt": "2026-08-17T11:36:41.736Z",
+  "pipeline": [
+    "Seed the 100-app task set and official developer entry points.",
+    "Normalize auth, credential access, API breadth, MCP status, and buildability.",
+    "Run contradiction checks so API exists is never treated as credentials are obtainable.",
+    "Fetch every evidence URL and separate reachable, guarded, and failed sources.",
+    "Queue low-confidence or contradictory rows for a human/browser check."
+  ],
+  "summary": {
+    "apps": 100,
+    "evidenceUrls": 136,
+    "access": {
+      "Gated": 18,
+      "Mixed": 18,
+      "Self-serve": 64
+    },
+    "verdict": {
+      "Blocked": 7,
+      "Conditional": 25,
+      "Ready": 68
+    },
+    "mcp": {
+      "Community": 5,
+      "None": 59,
+      "Official": 36
+    },
+    "confidence": {
+      "High": 85,
+      "Low": 6,
+      "Medium": 9
+    },
+    "sourceStates": {
+      "reachable": 134,
+      "guarded": 1,
+      "failed": 1
+    },
+    "contradictionWarnings": 7
+  },
+  "contradictions": [
+    {
+      "id": 50,
+      "app": "Fanbasis",
+      "warning": "human review required"
+    },
+    {
+      "id": 59,
+      "app": "Waterfall.io",
+      "warning": "human review required"
+    },
+    {
+      "id": 84,
+      "app": "Paygent Connect",
+      "warning": "human review required"
+    },
+    {
+      "id": 85,
+      "app": "iPayX",
+      "warning": "human review required"
+    },
+    {
+      "id": 94,
+      "app": "Consensus",
+      "warning": "human review required"
+    },
+    {
+      "id": 95,
+      "app": "Reducto",
+      "warning": "official MCP needs a dedicated source"
+    },
+    {
+      "id": 97,
+      "app": "Higgsfield",
+      "warning": "human review required"
+    }
+  ],
+  "apps": [
+    {
+      "id": 1,
+      "app": "Salesforce",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html",
+          "finalUrl": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+          "finalUrl": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 2,
+      "app": "HubSpot",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+          "finalUrl": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 3,
+      "app": "Pipedrive",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+          "finalUrl": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 4,
+      "app": "Attio",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.attio.com/docs/oauth/token",
+          "finalUrl": "https://docs.attio.com/docs/oauth/token",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.attio.com/mcp/overview",
+          "finalUrl": "https://docs.attio.com/mcp/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 5,
+      "app": "Twenty",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://twenty.com/developers",
+          "finalUrl": "https://docs.twenty.com/developers/introduction",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 6,
+      "app": "Podio",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.podio.com/authentication",
+          "finalUrl": "https://developers.podio.com/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 7,
+      "app": "Zoho CRM",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+          "finalUrl": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 8,
+      "app": "Close",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.close.com/topics/authentication/",
+          "finalUrl": "https://developer.close.com/api/overview/api-key-authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 9,
+      "app": "Copper",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.copper.com/introduction/authentication.html",
+          "finalUrl": "https://developer.copper.com/introduction/authentication.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 10,
+      "app": "DealCloud",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://api.docs.dealcloud.com/",
+          "finalUrl": "https://api.docs.dealcloud.com/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 11,
+      "app": "Zendesk",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+          "finalUrl": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developer.zendesk.com/documentation/api-basics/authentication/oauth-migration/",
+          "finalUrl": "https://developer.zendesk.com/documentation/authentication/oauth-migration/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 12,
+      "app": "Intercom",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+          "finalUrl": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developers.intercom.com/docs/guides/mcp",
+          "finalUrl": "https://developers.intercom.com/docs/guides/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 13,
+      "app": "Freshdesk",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.freshdesk.com/api/#authentication",
+          "finalUrl": "https://developers.freshdesk.com/api/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 14,
+      "app": "Front",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://dev.frontapp.com/docs/authentication",
+          "finalUrl": "https://dev.frontapp.com/docs/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 15,
+      "app": "Pylon",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+          "finalUrl": "https://docs.usepylon.com/pylon-docs/developer/api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 16,
+      "app": "LiveAgent",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://support.liveagent.com/840770-Complete-API-reference",
+          "finalUrl": "https://support.liveagent.com/840770-Complete-API-reference",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 17,
+      "app": "Plain",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.plain.com/docs/graphql/introduction",
+          "finalUrl": "https://www.plain.com/docs/graphql/introduction",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://help.plain.com/article/mcp-server",
+          "finalUrl": "https://help.plain.com/article/mcp-server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 18,
+      "app": "Help Scout",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+          "finalUrl": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 19,
+      "app": "Gorgias",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.gorgias.com/reference/authentication",
+          "finalUrl": "https://developers.gorgias.com/reference/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 20,
+      "app": "Gladly",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://developer.gladly.com/rest/",
+          "finalUrl": "https://developer.gladly.com/rest/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 21,
+      "app": "Slack",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://api.slack.com/authentication/oauth-v2",
+          "finalUrl": "https://docs.slack.dev/authentication/installing-with-oauth/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.slack.dev/ai/mcp-server/",
+          "finalUrl": "https://docs.slack.dev/ai/slack-mcp-server/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 22,
+      "app": "Twilio",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.twilio.com/docs/iam/api-keys",
+          "finalUrl": "https://www.twilio.com/docs/iam/api-keys",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://www.twilio.com/docs/ai/mcp",
+          "finalUrl": "https://www.twilio.com/docs/ai/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 23,
+      "app": "Zoho Cliq",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.zoho.com/cliq/help/restapi/v2/oauth/",
+          "finalUrl": "https://www.zoho.com/cliq/help/restapi/v2/oauth/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 24,
+      "app": "Lark",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://open.larksuite.com/document/server-docs/authentication-management/access-token/overview",
+          "finalUrl": "https://open.larksuite.com/document/server-docs/authentication-management/access-token/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 25,
+      "app": "Pumble",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+          "finalUrl": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+          "finalUrl": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 26,
+      "app": "Discord",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://discord.com/developers/docs/topics/oauth2",
+          "finalUrl": "https://docs.discord.com/developers/topics/oauth2",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 27,
+      "app": "Telegram",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://core.telegram.org/bots/api#authorizing-your-bot",
+          "finalUrl": "https://core.telegram.org/bots/api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 28,
+      "app": "WhatsApp Business",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+          "finalUrl": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 29,
+      "app": "Aircall",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://developer.aircall.io/api-references/#authentication",
+          "finalUrl": "https://developers.aircall.io/api-references",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 30,
+      "app": "Vonage",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+          "finalUrl": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 31,
+      "app": "Google Ads",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+          "finalUrl": "https://developers.google.com/google-ads/api/docs/oauth/overview?hl=pl",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+          "finalUrl": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels?hl=pt-br",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 32,
+      "app": "Meta Ads",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.facebook.com/docs/marketing-apis/",
+          "finalUrl": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 33,
+      "app": "LinkedIn Ads",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started",
+          "finalUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started?view=li-lms-2026-08",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 34,
+      "app": "GoHighLevel",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://highlevel.stoplight.io/docs/integrations/00d0c0ecaa369-getting-started",
+          "finalUrl": "https://highlevel.stoplight.io/docs/integrations/00d0c0ecaa369-getting-started",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 35,
+      "app": "Mailchimp",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+          "finalUrl": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 36,
+      "app": "Klaviyo",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+          "finalUrl": "https://developers.klaviyo.com/en/docs/authenticate_",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 37,
+      "app": "systeme.io",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://developer.systeme.io/reference/getting-started",
+          "finalUrl": "https://developer.systeme.io/reference/getting-started",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 38,
+      "app": "Pinterest",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+          "finalUrl": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 39,
+      "app": "Threads",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.facebook.com/docs/threads/get-started/get-access-tokens-and-permissions",
+          "finalUrl": "https://developers.facebook.com/documentation/threads/get-started/get-access-tokens-and-permissions",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 40,
+      "app": "SendGrid",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+          "finalUrl": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 41,
+      "app": "Shopify",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+          "finalUrl": "https://shopify.dev/docs/apps/build/authentication-authorization",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://shopify.dev/docs/apps/build/devmcp",
+          "finalUrl": "https://shopify.dev/docs/apps/build/ai-toolkit",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 42,
+      "app": "WooCommerce",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication",
+          "finalUrl": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 43,
+      "app": "BigCommerce",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.bigcommerce.com/docs/start/authentication",
+          "finalUrl": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 44,
+      "app": "Salesforce Commerce Cloud",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+          "finalUrl": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 45,
+      "app": "Magento / Adobe Commerce",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+          "finalUrl": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 46,
+      "app": "Squarespace",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+          "finalUrl": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 47,
+      "app": "Ecwid",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+          "finalUrl": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 48,
+      "app": "Gumroad",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://gumroad.com/api",
+          "finalUrl": "https://gumroad.com/api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 49,
+      "app": "Amazon Selling Partner",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications",
+          "finalUrl": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 50,
+      "app": "Fanbasis",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://www.fanbasis.com/",
+          "finalUrl": "https://commas.com/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 51,
+      "app": "DataForSEO",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.dataforseo.com/v3/auth/",
+          "finalUrl": "https://docs.dataforseo.com/v3/auth/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 52,
+      "app": "SE Ranking",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://seranking.com/api.html",
+          "finalUrl": "https://seranking.com/api.html",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 53,
+      "app": "Ahrefs",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.ahrefs.com/docs/api/reference/introduction",
+          "finalUrl": "https://docs.ahrefs.com/en/api/docs/introduction",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 54,
+      "app": "MrScraper",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.mrscraper.com/docs/api/authentication",
+          "finalUrl": "https://docs.mrscraper.com/docs/api/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 55,
+      "app": "Apify",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.apify.com/api/v2#authentication",
+          "finalUrl": "https://docs.apify.com/api/v2",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.apify.com/platform/integrations/mcp",
+          "finalUrl": "https://docs.apify.com/integrations/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 56,
+      "app": "Firecrawl",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.firecrawl.dev/api-reference/introduction",
+          "finalUrl": "https://docs.firecrawl.dev/api-reference/introduction",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.firecrawl.dev/mcp-server",
+          "finalUrl": "https://docs.firecrawl.dev/mcp-server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 57,
+      "app": "Bright Data",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.brightdata.com/api-reference/authentication",
+          "finalUrl": "https://docs.brightdata.com/api-reference/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.brightdata.com/ai/for-agents/docs-mcp",
+          "finalUrl": "https://docs.brightdata.com/ai/for-agents/docs-mcp",
+          "status": 200,
+          "attempts": 2,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 58,
+      "app": "Sherlock",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://github.com/sherlock-project/sherlock",
+          "finalUrl": "https://github.com/sherlock-project/sherlock",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 59,
+      "app": "Waterfall.io",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://www.waterfall.io/",
+          "finalUrl": "https://www.waterfall.io/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 60,
+      "app": "Clay",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://university.clay.com/docs/clay-api-cli",
+          "finalUrl": "https://university.clay.com/docs/clay-api-cli",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 61,
+      "app": "GitHub",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+          "finalUrl": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://github.com/github/github-mcp-server",
+          "finalUrl": "https://github.com/github/github-mcp-server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 62,
+      "app": "Vercel",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://vercel.com/docs/rest-api/reference/welcome",
+          "finalUrl": "https://vercel.com/docs/rest-api",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://vercel.com/docs/mcp/vercel-mcp",
+          "finalUrl": "https://vercel.com/docs/agent-resources/vercel-mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 63,
+      "app": "Netlify",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+          "finalUrl": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview/",
+          "finalUrl": "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 64,
+      "app": "Cloudflare",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+          "finalUrl": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+          "finalUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 65,
+      "app": "Supabase",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://supabase.com/docs/guides/api/api-keys",
+          "finalUrl": "https://supabase.com/docs/guides/getting-started/api-keys",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://supabase.com/docs/guides/getting-started/mcp",
+          "finalUrl": "https://supabase.com/docs/guides/ai-tools/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 66,
+      "app": "Neo4j",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://neo4j.com/docs/mcp/current/authentication/",
+          "finalUrl": "https://neo4j.com/docs/mcp/current/authentication/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://github.com/neo4j/mcp",
+          "finalUrl": "https://github.com/neo4j/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 67,
+      "app": "Snowflake",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+          "finalUrl": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://github.com/Snowflake-Labs/mcp",
+          "finalUrl": "https://github.com/Snowflake-Labs/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 68,
+      "app": "MongoDB Atlas",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+          "finalUrl": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://www.mongodb.com/docs/mcp-server/",
+          "finalUrl": "https://www.mongodb.com/docs/mcp-server/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 69,
+      "app": "Datadog",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.datadoghq.com/api/latest/authentication/",
+          "finalUrl": "https://docs.datadoghq.com/api/latest/authentication/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.datadoghq.com/mcp_server/",
+          "finalUrl": "https://docs.datadoghq.com/mcp_server/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 70,
+      "app": "Sentry",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.sentry.io/api/auth/",
+          "finalUrl": "https://docs.sentry.io/api/auth/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.sentry.io/product/sentry-mcp/",
+          "finalUrl": "https://mcp.sentry.dev/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 71,
+      "app": "Notion",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.notion.com/docs/authorization",
+          "finalUrl": "https://developers.notion.com/guides/get-started/authorization",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developers.notion.com/docs/mcp",
+          "finalUrl": "https://developers.notion.com/guides/mcp/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 72,
+      "app": "Airtable",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://airtable.com/developers/web/api/authentication",
+          "finalUrl": "https://airtable.com/developers/web/api/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://support.airtable.com/v1/docs/using-the-airtable-mcp-server",
+          "finalUrl": "https://support.airtable.com/articles/9897799762-using-the-airtable-mcp-server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 73,
+      "app": "Linear",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://linear.app/developers/oauth-2-0-authentication",
+          "finalUrl": "https://linear.app/developers/oauth-2-0-authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://linear.app/docs/mcp",
+          "finalUrl": "https://linear.app/docs/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 74,
+      "app": "Jira",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+          "finalUrl": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://www.atlassian.com/platform/remote-mcp-server",
+          "finalUrl": "https://www.atlassian.com/platform/rovo-mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 75,
+      "app": "Asana",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.asana.com/docs/authentication",
+          "finalUrl": "https://developers.asana.com/docs/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+          "finalUrl": "https://developers.asana.com/docs/using-asanas-mcp-server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 76,
+      "app": "monday.com",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.monday.com/api-reference/docs/authentication",
+          "finalUrl": "https://developer.monday.com/api-reference/docs/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developer.monday.com/apps/docs/mcp-servers",
+          "finalUrl": "https://developer.monday.com/apps/docs/mcp-servers",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 77,
+      "app": "ClickUp",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.clickup.com/docs/authentication",
+          "finalUrl": "https://developer.clickup.com/docs/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+          "finalUrl": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 78,
+      "app": "Coda",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://coda.io/developers/apis/v1",
+          "finalUrl": "https://docs.superhuman.com/developers/apis/v1",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://coda.io/product/whats-new",
+          "finalUrl": "https://coda.io/product/whats-new",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 79,
+      "app": "Smartsheet",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+          "finalUrl": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 80,
+      "app": "Harvest",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+          "finalUrl": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 81,
+      "app": "Stripe",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.stripe.com/keys",
+          "finalUrl": "https://docs.stripe.com/keys",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.stripe.com/mcp",
+          "finalUrl": "https://docs.stripe.com/mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 82,
+      "app": "Plaid",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://plaid.com/docs/api/",
+          "finalUrl": "https://plaid.com/docs/api/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://plaid.com/docs/resources/mcp/",
+          "finalUrl": "https://plaid.com/docs/resources/mcp/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 83,
+      "app": "Binance",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+          "finalUrl": "https://developers.binance.com/en/docs/products/spot/rest-api",
+          "status": 202,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 84,
+      "app": "Paygent Connect",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://www.paygent.com/",
+          "status": null,
+          "attempts": 2,
+          "state": "failed",
+          "error": "fetch failed"
+        }
+      ],
+      "sourceState": "needs-review"
+    },
+    {
+      "id": 85,
+      "app": "iPayX",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://ipayx.ai/docs",
+          "finalUrl": "https://www.ipayx.ai/docs",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 86,
+      "app": "QuickBooks Online",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+          "finalUrl": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 87,
+      "app": "Xero",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/overview",
+          "finalUrl": "https://developer.xero.com/documentation/guides/oauth2/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://developer.xero.com/faq",
+          "finalUrl": "https://developer.xero.com/faq",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 88,
+      "app": "Brex",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developer.brex.com/docs/authentication/",
+          "finalUrl": "https://developer.brex.com/guides/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 89,
+      "app": "Ramp",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.ramp.com/developer-api/v1/authorization",
+          "finalUrl": "https://docs.ramp.com/developer-api/v1/authorization",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 90,
+      "app": "PitchBook",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://pitchbook.com/data/api",
+          "finalUrl": "https://pitchbook.com/data/api",
+          "status": 403,
+          "attempts": 1,
+          "state": "guarded"
+        }
+      ],
+      "sourceState": "guarded"
+    },
+    {
+      "id": 91,
+      "app": "Gemini Notebook Enterprise",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+          "finalUrl": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+          "finalUrl": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 92,
+      "app": "Otter AI",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+          "finalUrl": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 93,
+      "app": "Fathom",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://developers.fathom.ai/",
+          "finalUrl": "https://developers.fathom.ai/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 94,
+      "app": "Consensus",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://consensus.app/",
+          "finalUrl": "https://consensus.app/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 95,
+      "app": "Reducto",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.reducto.ai/overview",
+          "finalUrl": "https://docs.reducto.ai/overview",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 96,
+      "app": "Devin",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://docs.devin.ai/api-reference/authentication",
+          "finalUrl": "https://docs.devin.ai/api-reference/authentication",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        },
+        {
+          "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+          "finalUrl": "https://docs.devin.ai/work-with-devin/devin-mcp",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 97,
+      "app": "Higgsfield",
+      "confidence": "Low",
+      "sources": [
+        {
+          "url": "https://higgsfield.ai/cli",
+          "finalUrl": "https://higgsfield.ai/cli",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 98,
+      "app": "Mermaid CLI",
+      "confidence": "High",
+      "sources": [
+        {
+          "url": "https://github.com/mermaid-js/mermaid-cli",
+          "finalUrl": "https://github.com/mermaid-js/mermaid-cli",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 99,
+      "app": "YouTube Transcript API",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://transcriptapi.com/docs",
+          "finalUrl": "https://transcriptapi.com/docs/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    },
+    {
+      "id": 100,
+      "app": "Grain",
+      "confidence": "Medium",
+      "sources": [
+        {
+          "url": "https://developers.grain.com/",
+          "finalUrl": "https://developers.grain.com/",
+          "status": 200,
+          "attempts": 1,
+          "state": "reachable"
+        }
+      ],
+      "sourceState": "verified-online"
+    }
+  ]
+}
