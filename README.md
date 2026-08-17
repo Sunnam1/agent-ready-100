@@ -1,6 +1,6 @@
 # The Agent-Ready 100
 
-A static HTML case study for Composio’s AI Product Ops take-home assignment. The frontend uses only HTML, CSS, and vanilla JavaScript—no TypeScript or frontend framework.
+A static HTML case study for Composio’s AI Product Ops take-home assignment. The frontend uses only HTML, CSS, and vanilla JavaScript.
 
 - Live case study: https://sunnam1.github.io/agent-ready-100/
 - Source repository: https://github.com/Sunnam1/agent-ready-100
