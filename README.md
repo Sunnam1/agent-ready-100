@@ -1,41 +1,49 @@
 # The Agent-Ready 100
 
-An evidence-backed research system and one-page case study for Composio’s AI Product Ops take-home assignment.
+A static HTML case study for Composio’s AI Product Ops take-home assignment. The frontend uses only HTML, CSS, and vanilla JavaScript—no TypeScript or frontend framework.
 
-Live case study: https://agent-ready-100.ilovetheguitarihave.chatgpt.site
+- Live case study: https://sunnam1.github.io/agent-ready-100/
+- Source repository: https://github.com/Sunnam1/agent-ready-100
 
-Source repository: https://github.com/Sunnam1/agent-ready-100
+## Project files
 
-## What is here
-
-- data/apps.json — the normalized 100-app dataset.
-- data/verification.json — a stratified 20-app manual cross-check, including misses and corrections.
-- agent/research.mjs — the repeatable research QA agent.
-- app/ — the self-explanatory case-study site.
+- `index.html` — the complete one-page case study structure.
+- `styles.css` — responsive visual design.
+- `app.js` — dataset loading, metrics, filters, and audit replay.
+- `data/apps.json` — normalized 100-app research dataset.
+- `data/verification.json` — deterministic 20-app manual verification sample.
+- `agent/research.mjs` — repeatable research QA agent.
 
 ## Run the research agent
 
-Node 20+ is enough; the agent has no third-party runtime dependencies.
+Node.js 20+ is enough; the agent has no third-party runtime dependencies.
 
-    node agent/research.mjs
+```bash
+node agent/research.mjs
+```
 
-It checks every official evidence URL, runs contradiction rules, separates guarded pages from broken sources, and writes work/research-report.json. Use --no-fetch to run only the structural checks.
+The agent checks every evidence URL, runs contradiction rules, separates guarded pages from broken sources, and writes `work/research-report.json`. To run only structural checks without network requests:
 
-The deliberately human step is the review queue: low-confidence vendors, pages blocked by authentication/anti-bot controls, and claims where “API documented” does not prove “production credentials obtainable.” The final dataset records those limitations instead of guessing.
+```bash
+node agent/research.mjs --no-fetch
+```
 
-## Run the case study
+The human review queue covers low-confidence vendors, protected pages, and claims where documented APIs do not prove that production credentials are obtainable.
 
-    npm install
-    npm run dev
+## Run the HTML page locally
 
-The page computes its headline metrics directly from data/apps.json; update a row and the charts, filters, and totals change with it.
+Serve the repository directory with any static web server:
 
-## Method
+```bash
+python -m http.server 8000
+```
 
-1. Seed first-party developer entry points for all 100 apps.
-2. Normalize five decision fields: auth, access, API breadth, MCP, and buildability.
-3. Run mechanical URL and contradiction checks.
-4. Route low-confidence and gated rows to browser/human review.
-5. Re-check a deterministic 20-app sample across all ten categories.
+Then open `http://localhost:8000`. Opening `index.html` directly is not supported because browsers block local JSON requests.
 
-Research date: 17 August 2026. Product access, pricing, and developer programs change; rerun the agent and re-check Low confidence rows before making outreach decisions.
+## Validation
+
+```bash
+node --test tests/static-site.test.mjs
+```
+
+Research date: 17 August 2026. Developer programs and access rules change; rerun the agent and re-check low-confidence rows before making outreach decisions.

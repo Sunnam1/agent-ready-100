@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --ink: #172119;
   --ink-2: #223027;
@@ -133,6 +131,7 @@ h2 { margin: 15px 0 0; max-width: 950px; font: 400 clamp(42px, 6.4vw, 90px)/.94 
 .terminal-card code > span, .terminal-card em { color: var(--acid); font-style: normal; }
 .terminal-card button { width: 100%; padding: 16px; border: 0; border-top: 1px solid #354038; color: var(--acid); background: transparent; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
 .terminal-card button:hover { color: var(--ink); background: var(--acid); }
+.terminal-card button:disabled { cursor: wait; opacity: .75; }
 .human-card { display: flex; flex-direction: column; padding: 32px; color: var(--ink); background: var(--acid); }
 .human-card .section-no { color: var(--ink); opacity: .65; }
 .human-card h3 { max-width: 580px; font: 400 36px/1.05 Georgia, serif; }
@@ -168,6 +167,11 @@ h2 { margin: 15px 0 0; max-width: 950px; font: 400 clamp(42px, 6.4vw, 90px)/.94 
 .result-dot.corrected { background: var(--orange); }
 .verification-grid article > a { display: grid; grid-template-columns: 120px 1fr 18px; gap: 16px; min-height: 65px; align-items: center; padding: 13px 22px; border-bottom: 1px solid var(--line); }
 .verification-grid article > a:last-child { border-bottom: 0; }
+.verification-grid article > div:not(.check-head) > a { display: grid; grid-template-columns: 120px 1fr 18px; gap: 16px; min-height: 65px; align-items: center; padding: 13px 22px; border-bottom: 1px solid var(--line); }
+.verification-grid article > div:not(.check-head) > a:last-child { border-bottom: 0; }
+.verification-grid article > div:not(.check-head) > a:hover b { text-decoration: underline; }
+.verification-grid article > div:not(.check-head) > a span { color: var(--muted); font-size: 11px; line-height: 1.4; }
+.verification-grid article > div:not(.check-head) > a i { font-style: normal; }
 .verification-grid article > a:hover b { text-decoration: underline; }
 .verification-grid a span { color: var(--muted); font-size: 11px; line-height: 1.4; }
 .verification-grid a i { font-style: normal; }
@@ -232,6 +236,7 @@ footer > div { display: flex; align-items: center; gap: 10px; }
 footer p { margin: 0; text-align: center; color: #96a097; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
 footer > a { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
 footer > a:hover { color: var(--acid); }
+.noscript { position: fixed; inset: auto 20px 20px; z-index: 10; margin: 0; padding: 14px 18px; color: var(--paper); background: var(--ink); border: 1px solid var(--acid); font-size: 12px; }
 
 @media (max-width: 1080px) {
   .hero-copy { grid-template-columns: 1fr; }
@@ -276,6 +281,7 @@ footer > a:hover { color: var(--acid); }
   .accuracy-arrow span { display: none; }
   .verification-grid { grid-template-columns: 1fr; }
   .verification-grid article > a { grid-template-columns: 95px 1fr 14px; }
+  .verification-grid article > div:not(.check-head) > a { grid-template-columns: 95px 1fr 14px; }
   .all-checks a { grid-template-columns: 76px 1fr 50px; }
   .all-checks a p { grid-column: 2 / 4; }
   .filters { position: static; grid-template-columns: 1fr 1fr; }

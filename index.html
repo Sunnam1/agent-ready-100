@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An evidence-backed integration readiness map across 100 requested apps.">
+    <meta property="og:title" content="The Agent-Ready 100">
+    <meta property="og:description" content="A reproducible AI Product Ops case study across 100 popular apps.">
+    <meta property="og:type" content="website">
+    <title>The Agent-Ready 100 | Composio Product Ops Study</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="top">
+        <nav class="topbar" aria-label="Primary navigation">
+          <a class="brand" href="#top"><span class="mark">C</span><span>Agent-Ready 100</span></a>
+          <div class="navlinks">
+            <a href="#findings">Findings</a>
+            <a href="#agent">Agent</a>
+            <a href="#proof">Proof</a>
+            <a href="#index">100-app index</a>
+          </div>
+          <span class="status"><i></i> Verified · 17 Aug 2026</span>
+        </nav>
+
+        <div class="hero-copy">
+          <p class="eyebrow">COMPOSIO · AI PRODUCT OPS FIELD STUDY</p>
+          <h1>The market is API-rich.<br><em>It is permission-poor.</em></h1>
+          <p class="lede">Of 100 requested apps, <strong><span data-buildable>93</span> are technically toolkit-buildable</strong>—but only <strong><span data-self-serve>64</span> offer a clean self-serve path</strong>. The constraint has shifted from endpoints to approvals, admin rights, and production access.</p>
+        </div>
+
+        <div class="scoreboard" aria-label="Headline findings">
+          <article><span class="metric" data-ready>68</span><span class="metric-label">Build now</span><small>Documented + usable today</small></article>
+          <article><span class="metric" data-conditional>25</span><span class="metric-label">Conditional</span><small>Build after setup or approval</small></article>
+          <article><span class="metric" data-blocked>07</span><span class="metric-label">Outreach</span><small>No self-serve route today</small></article>
+          <article class="acid-card"><span class="metric" data-official-mcp>36</span><span class="metric-label">Official MCP</span><small>Vendor-owned agent surface</small></article>
+        </div>
+      </section>
+
+      <section class="section" id="findings">
+        <div class="section-head">
+          <div><span class="section-no">01 / THE FINDINGS</span><h2>Permissioning is the real integration layer.</h2></div>
+          <p>Public documentation is common. Production-ready credentials are not. A useful research system must score both—or it will systematically overstate what can ship.</p>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight lead-insight">
+            <span class="insight-kicker">The readiness gap</span>
+            <strong><span data-buildable>93</span>%</strong>
+            <h3>can become a toolkit</h3>
+            <p>Yet 36% of the set is gated or mixed-access. “Has an API” and “can onboard a developer” are different facts.</p>
+            <div class="gapbar" aria-label="Buildability split">
+              <span data-ready-bar>68 ready</span><span data-conditional-bar>25 conditional</span><span data-blocked-bar>7 blocked</span>
+            </div>
+          </article>
+          <article class="insight">
+            <span class="insight-kicker">Easy-win cluster</span>
+            <strong>20/20</strong>
+            <h3>Developer + productivity apps are ready</h3>
+            <p>They pair self-serve credentials with broad APIs. Eighteen already publish an official MCP server.</p>
+          </article>
+          <article class="insight">
+            <span class="insight-kicker">Gate concentration</span>
+            <strong>61%</strong>
+            <h3>of gated apps sit in three categories</h3>
+            <p>Marketing, ecommerce, and finance hold 11 of the 18 hard-gated rows—usually because of compliance, partner review, or paid access.</p>
+          </article>
+          <article class="insight">
+            <span class="insight-kicker">The MCP wave</span>
+            <div class="mcp-ring"><span data-official-mcp>36</span><small>official</small></div>
+            <h3>MCP is real, but uneven</h3>
+            <p>Half of all official MCPs in this set come from developer and productivity tools. Marketing has zero.</p>
+          </article>
+        </div>
+
+        <div class="analysis-grid">
+          <article class="panel">
+            <div class="panel-title"><div><span class="section-no">AUTH</span><h3>OAuth wins distribution. Tokens win first-run speed.</h3></div><span class="note">Methods overlap</span></div>
+            <div class="bars" id="auth-bars" aria-label="Authentication method counts"></div>
+            <p class="caption">Two-thirds support OAuth, while 58 offer a key/token route. The best toolkits support both: token for a fast internal proof, OAuth for safe distribution.</p>
+          </article>
+          <article class="panel">
+            <div class="panel-title"><div><span class="section-no">CATEGORY × ACCESS</span><h3>Where the credentials are.</h3></div><span class="note">10 apps per row</span></div>
+            <div class="category-bars" id="category-bars"></div>
+            <div class="legend"><span><i class="self"></i> Self-serve</span><span><i class="mixed"></i> Mixed</span><span><i class="gated"></i> Gated</span><span class="legend-end">right = ready</span></div>
+          </article>
+        </div>
+
+        <article class="outreach">
+          <div><span class="section-no">THE 7-APP OUTREACH QUEUE</span><h3>Don’t spend engineering time until access is real.</h3></div>
+          <div class="outreach-list" id="outreach-list"></div>
+        </article>
+      </section>
+
+      <section class="dark-section" id="agent">
+        <div class="section-head inverse">
+          <div><span class="section-no">02 / THE RESEARCH AGENT</span><h2>A pipeline that knows when to ask for help.</h2></div>
+          <p>The agent normalizes seeded evidence, checks every source, runs contradiction rules, and routes uncertain claims to a human review queue.</p>
+        </div>
+
+        <div class="workflow" aria-label="Research workflow">
+          <article><span>01</span><h3>Seed</h3><p>Start from all 100 requested apps and first-party developer entry points.</p></article>
+          <article><span>02</span><h3>Fetch</h3><p>Check evidence URLs with timeouts, retries, and guarded-page detection.</p></article>
+          <article><span>03</span><h3>Normalize</h3><p>Map auth, access, surface, MCP, buildability, and confidence.</p></article>
+          <article><span>04</span><h3>Challenge</h3><p>Flag contradictions such as “Ready” paired with a gated production path.</p></article>
+          <article><span>05</span><h3>Review</h3><p>Send low-confidence and negative-evidence claims to a person.</p></article>
+        </div>
+
+        <div class="agent-proof" id="proof">
+          <article class="terminal-card">
+            <div class="terminal-top"><span><i></i><i></i><i></i></span><b>research-agent · latest audit</b></div>
+            <pre><code id="terminal-output"><span>$</span> node agent/research.mjs
+
+✓ 100 apps normalized
+✓ 136 official evidence URLs checked
+✓ 134 reachable · 1 guarded · 1 failed
+<em>! 7 contradiction / review warnings</em>
+
+Report written to work/research-report.json</code></pre>
+            <button type="button" id="replay-agent">Replay latest audit</button>
+          </article>
+
+          <article class="human-card">
+            <span class="section-no">WHERE A HUMAN WAS NEEDED</span>
+            <h3>Pages prove syntax. They do not always prove access.</h3>
+            <ul>
+              <li><b>Account walls</b><span>Could credentials be created without a paid tenant?</span></li>
+              <li><b>Production gates</b><span>Did sandbox access survive app review, KYC, or partner approval?</span></li>
+              <li><b>Negative evidence</b><span>For Fanbasis, Waterfall, Paygent, and Consensus, “no public API found” remains explicitly low-confidence.</span></li>
+            </ul>
+            <div class="artifact-links">
+              <a href="./data/apps.json" download>Download dataset <b>↓</b></a>
+              <a href="./public/research-report.json" download>Download agent audit <b>↓</b></a>
+              <a href="https://github.com/Sunnam1/agent-ready-100" target="_blank" rel="noreferrer">Source repository <b>↗</b></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section verify-section">
+        <div class="section-head">
+          <div><span class="section-no">03 / VERIFICATION</span><h2>Accuracy moved because the agent was allowed to be wrong.</h2></div>
+          <p id="verification-method">A deterministic 20-app sample across all ten categories was manually checked against first-party sources.</p>
+        </div>
+
+        <div class="accuracy">
+          <article><span>FIRST PASS</span><strong id="first-pass">83%</strong><div><i id="first-pass-bar" style="width:83%"></i></div><p>83 of 100 sampled field judgments matched first-party docs.</p></article>
+          <div class="accuracy-arrow"><span>+13 pts</span>→</div>
+          <article class="final-score"><span>AFTER VERIFICATION</span><strong id="final-pass">96%</strong><div><i id="final-pass-bar" style="width:96%"></i></div><p>Corrections were written back to the dataset; four judgments remain explicitly directional.</p></article>
+        </div>
+
+        <div class="verification-grid">
+          <article><div class="check-head"><span class="result-dot hit"></span><div><b id="hit-count">10 clean hits</b><small>Kept without material change</small></div></div><div id="hit-checks"></div></article>
+          <article><div class="check-head"><span class="result-dot corrected"></span><div><b id="corrected-count">9 corrected</b><small>First-pass claim changed</small></div></div><div id="corrected-checks"></div></article>
+        </div>
+        <details class="all-checks"><summary>See all 20 manual checks <span>+</span></summary><div id="all-checks"></div></details>
+      </section>
+
+      <section class="index-section" id="index">
+        <div class="index-head">
+          <div><span class="section-no">04 / THE 100-APP INDEX</span><h2>Every claim, filterable and sourced.</h2></div>
+          <p>Confidence measures the evidence, not product quality. Low-confidence rows are the honest boundary of public research.</p>
+        </div>
+
+        <div class="filters">
+          <label class="search"><span>⌕</span><input id="search" placeholder="Search app, auth, blocker…" aria-label="Search the app index"></label>
+          <label><span>Category</span><select id="category"><option>All</option></select></label>
+          <label><span>Verdict</span><select id="verdict"><option>All</option><option>Ready</option><option>Conditional</option><option>Blocked</option></select></label>
+          <label><span>Access</span><select id="access"><option>All</option><option>Self-serve</option><option>Mixed</option><option>Gated</option></select></label>
+          <b class="result-count" id="result-count">100 / 100</b>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th># / App</th><th>Auth + access</th><th>API surface</th><th>MCP</th><th>Verdict / blocker</th><th>Evidence</th></tr></thead>
+            <tbody id="app-rows"></tbody>
+          </table>
+          <div class="empty" id="empty-state" hidden>No apps match those filters.</div>
+        </div>
+      </section>
+
+      <footer>
+        <div><span class="mark">C</span><b>The Agent-Ready 100</b></div>
+        <p>Research date: 17 August 2026 · First-party evidence preferred · Built as a Composio AI Product Ops field study</p>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+    <noscript><p class="noscript">JavaScript is required for the interactive filters; the dataset remains available as a direct download.</p></noscript>
+  </body>
+</html>
